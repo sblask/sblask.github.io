@@ -1,0 +1,113 @@
+.clear {
+    clear: both;
+}
+
+.site-header {
+    background: $background-header;
+    height: $header-height;
+
+    a {
+        color: white;
+        float:left;
+        padding: 5px;
+    }
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 0 20px;
+
+    .content-wrapper-background {
+        background: $background-content;
+
+        .content-wrapper-offset {
+            position: relative;
+            top: $vertical-content-offset;
+            width: 100%;
+        }
+    }
+}
+
+.content {
+    float: left;
+    margin-bottom: $vertical-content-offset;
+    padding: 0 20px;
+    width: calc(100% - #{$about-width-wide});
+    min-height: calc(100vh - #{$header-height} - #{$vertical-content-offset})
+}
+
+.about {
+    float: right;
+    font-size: $small-font-size;
+    margin-bottom: $vertical-content-offset;
+    padding: 0 20px;
+    width: $about-width-wide;
+
+    figure {
+        margin: auto;
+        text-align: center;
+
+        img {
+            border: 10px solid white;
+            max-width: 100%;
+        }
+    }
+
+    ul {
+        padding: 0 70px;
+
+        li {
+            white-space: nowrap;
+
+            &:before {
+                display: inline-block;
+                font-family: FontAwesome;
+            }
+            &.github:before {
+                content: "\f09b";
+            }
+            &.twitter:before {
+                content: "\f099";
+            }
+            &.linkedin:before {
+                content: "\f0e1";
+            }
+            &.rss:before {
+                content: "\f09e";
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .content {
+        width: calc(100% - #{$about-width-narrow});
+    }
+    .about {
+        width: $about-width-narrow;
+
+        figure {
+            img {
+                border-width: 5px;
+            }
+        }
+        ul {
+            padding: 0 35px;
+        }
+    }
+}
+@media (max-width: 500px) {
+    h1 {
+        margin-right: -40px;
+    }
+    h2 {
+        margin-right: -30px;
+    }
+    .content {
+        width: 100%;
+    }
+    .about {
+        display: none;
+    }
+}

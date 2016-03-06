@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ "/css/main.css" }}">
+
+        <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+    </head>
+    <body>
+        <header class="site-header"></header>
+        <div class="content-wrapper">
+            <div class="content-wrapper-background">
+                <div class="content-wrapper-offset">
+                    <div class="content">
+                        {{ content }}
+                    </div>
+                    <aside class="about">
+                        <a href="/">
+                            <figure>
+                                <img src="{{ site.author_image }}" alt="{{ site.author }}">
+                                <figcaption>{{ site.description }}</figcaption>
+                            </figure>
+                        </a>
+                        <ul>
+                            <li class="github">
+                                <a href="https://github.com/sblask">Github</a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/priatuu">Twitter</a>
+                            </li>
+                            <li class="linkedin">
+                                <a href="https://www.linkedin.com/in/sebastianblask">LinkedIn</a>
+                            </li>
+                            <li class="rss">
+                                <a href="/feed.xml">RSS</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
