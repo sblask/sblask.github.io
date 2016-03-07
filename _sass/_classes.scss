@@ -22,6 +22,7 @@
         background: $background-content;
 
         .content-wrapper-offset {
+            min-height: calc(100vh - #{$header-height});
             position: relative;
             top: $vertical-content-offset;
             width: 100%;
@@ -34,7 +35,6 @@
     margin-bottom: $vertical-content-offset;
     padding: 0 20px;
     width: calc(100% - #{$about-width-wide});
-    min-height: calc(100vh - #{$header-height} - #{$vertical-content-offset})
 }
 
 .about {
@@ -105,9 +105,16 @@
         margin-right: -30px;
     }
     .content {
+        float: none;
         width: 100%;
     }
     .about {
-        display: none;
+        float: none;
+        margin-top: 50px;
+        width: 100%;
+
+        ul {
+            padding: 0;
+        }
     }
 }
