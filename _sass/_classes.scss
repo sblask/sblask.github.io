@@ -60,21 +60,26 @@
         li {
             white-space: nowrap;
 
-            &:before {
+            a span {
                 display: inline-block;
-                font-family: FontAwesome;
-            }
-            &.github:before {
-                content: "\f09b";
-            }
-            &.twitter:before {
-                content: "\f099";
-            }
-            &.linkedin:before {
-                content: "\f0e1";
-            }
-            &.rss:before {
-                content: "\f09e";
+                margin-right: 5px;
+
+                &:before {
+                    display: inline-block;
+                    font-family: FontAwesome;
+                }
+                &.github:before {
+                    content: "\f09b";
+                }
+                &.twitter:before {
+                    content: "\f099";
+                }
+                &.linkedin:before {
+                    content: "\f0e1";
+                }
+                &.rss:before {
+                    content: "\f09e";
+                }
             }
         }
     }
