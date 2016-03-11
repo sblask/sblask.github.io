@@ -55,7 +55,7 @@
     }
 
     ul {
-        padding: 0 70px;
+        padding: 0 60px;
 
         li {
             white-space: nowrap;
@@ -76,6 +76,9 @@
                 }
                 &.linkedin:before {
                     content: "\f0e1";
+                }
+                &.firefox:before {
+                    content: "\f269";
                 }
                 &.rss:before {
                     content: "\f09e";
@@ -98,7 +101,7 @@
             }
         }
         ul {
-            padding: 0 35px;
+            padding: 0 20px;
         }
     }
 }
