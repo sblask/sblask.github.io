@@ -7,24 +7,26 @@ categories:
 ---
 
 This article is about configuring the timeout which is responsible for turning
-off the backlight of a Latitude's keyboard after a keyboard, touchpad or track stick
-action. By default is it configured at 10 seconds which I wanted to change. As
-I had a hard time finding information about the issue, I hope this article can
-help others going through less trouble. If you are using Linux and are not
-interested in the history, you can skip right to the [solution](#solution).
+off the backlight of a Latitude's keyboard after a keyboard, touchpad or track
+stick action. By default is it configured at 10 seconds which I wanted to
+change. As I had a hard time finding information about the issue, I hope this
+article can help others going through less trouble. If you are using Linux and
+are not interested in the history, you can skip right to the
+[solution](#solution).
 
 A bit of history
 ----------------
 
 I bought a Dell Latitude E5450 about a year ago. On paper it combined
-everything I wanted, a matte screen(I want to see what's on my screen, not my
-face), backlit US keyboard(better for programming) a [pointing
-stick][pointing-stick](my fingers seem to be incompatible with touchpads) and
-an OK price. The only alternatives would have been HP, but they don't have a
-middle button for their pointstick which is vital for scrolling, and Lenovo,
-but at the time they only had Thinkpads without physical trackpoint
-buttons(horrible, but I guess a lot of people complained, because now they all
-have physical buttons again - too late for me).
+everything I wanted, a matte screen (I want to see what's on my screen, not my
+face), backlit US keyboard (better for programming) a [pointing
+stick][pointing-stick] (my fingers seem to be incompatible with touchpads and
+it's great for scrolling) and an OK price. The only alternatives would have
+been HP, but they don't have a middle button for their pointstick which is
+vital for scrolling, and Lenovo, but at the time they only had Thinkpads
+without physical trackpoint buttons(horrible, but I guess a lot of people
+complained, because now they all have physical buttons again - too late for
+me).
 
 I write "on paper", because it has two big problems. I still don't have a
 solution for the first one: there is a  ~500ms delay between hitting a key and
@@ -33,11 +35,11 @@ first I thought it's due to the missing driver support of the current Xubuntu
 back then as I also had problems with middle button detection and missing palm
 check configuration. But as I still had the delay, but not the other problems
 after an update to the latest Xubuntu, I contacted the support. After a lot of
-back and forth and even swapping the keyboard a few times(the support first
+back and forth and even swapping the keyboard a few times (the support first
 thought it's a hardware issue and then Dell had a hard time getting me a
 keyboard without broken keys or broken backlight so I even got a new unit...)
 it turns out it's working according to spec. Such a delay might make sense for
-touchpads, but even there it's configurable(palm check). It doesn't make sense
+touchpads, but even there it's configurable (palm check). It doesn't make sense
 for pointing sticks. But all the arguing in the world did not help, it's
 working according to spec and as such not a problem for Dell.
 
@@ -63,7 +65,7 @@ Solution
 One of my Google searches pointed me to libsmbios but it seemed helplessly
 outdated. After more searching I came across the [libsmbios git
 repository][libsmbios-git-repository] which finally allowed me to change the
-timeout. However, it works only under Linux(tested under Xubuntu 15.10).
+timeout. However, it works only under Linux (tested under Xubuntu 15.10).
 
 So lets get started, first you need to get the sources and compile them.
 
