@@ -55,6 +55,7 @@
     }
 
     ul {
+        list-style: none;
         padding: 0 60px;
 
         li {
@@ -89,7 +90,7 @@
 }
 
 @media (min-width: 600px) {
-    .content p {
+    .content p, .content ul {
         text-align: justify;
     }
 }
