@@ -46,7 +46,7 @@ There are several things to do under the `Items` tab:
    Window` (so it's the same thing as in Firefox)
  - Add CPU Graph, configure it to not have a frame and make the background
    color the same as the panel using the colour picker.
- - Change the format of the clock to `%A %d %B, %H:%M:%S`
+ - Change the format of the clock to `Week %V, %A %d %B, %H:%M:%S`
 
 ## Setup External Hardware
 
