@@ -316,3 +316,23 @@ Python 2 and 3, I've got [few aliases][virtualenvwrapper_aliases].
 [virtualenvwrapper_aliases]: https://github.com/sblask/dotfiles/blob/48d47a96aa174b92b808f5b3faff94e05b8bb5f0/zshrc.dotfile#L293
 [virtualenvwrapper_zsh]:     https://github.com/sblask/dotfiles/blob/40cccd3fc918059e5da160151af2bde7ce73b515/zshrc.dotfile#L233
 [virtualenv_path]:           https://github.com/sblask/dotfiles/blob/40cccd3fc918059e5da160151af2bde7ce73b515/zshrc.dotfile#L227
+
+You will probably come across missing Python headers when installing packages
+using `pip` at some point, so why not install them right away?
+
+```bash
+sudo apt-get install python-dev
+```
+
+Now you can go ahead and install the python utils/programs you need, here
+taking `httpie` as an example.
+
+```bash
+mkvirtualenv httpie # gets activated automatically
+pip install httpie
+ln -s ~/.virtualenvs/httpie/bin/http ~/.bin/
+```
+
+Other things that I install that way are:
+
+ - docker-compose
