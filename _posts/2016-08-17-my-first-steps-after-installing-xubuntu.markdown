@@ -249,7 +249,7 @@ sudo apt-get install \
     meld `# to compare files and directories from Thunar context menu` \
     puddletag `# to edit mp3 tags from Thunar context menu` \
     redshift \
-    tmux `# use `CTRL-B` + `I` to install the plugins` \
+    tmux `# use 'CTRL-B' + 'I' to install the plugins` \
     vim-gtk `# run BundleInstall the first time you run it to install all the plugins` \
     xclip \
 
