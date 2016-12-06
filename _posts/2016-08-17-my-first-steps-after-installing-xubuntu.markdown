@@ -164,6 +164,7 @@ sudo apt-get install \
 sudo apt-get purge \
     gnome-mines \
     gnome-sudoku \
+    indicator-messages `# I do not want notifications from Thunderbird` \
     parole `# I prefer vlc and gmusicbrowser` \
     pidgin \
     ristretto `# I prefer xnview` \
