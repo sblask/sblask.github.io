@@ -128,6 +128,9 @@ available...` Installing `pulseaudio-module-bluetooth` solves this problem.
  - Add keyboard shortcuts for `xbacklight -dec 1` and `xbacklight -inc 1` (the
    default hardware keys do not allow fine enough steps for backlight) and
    install xbacklight `sudo apt-get install xbacklight`
+ - Enable direct switching between display modes using `Fn+F8` by adding
+   `disper --cycle-stages='--single:--secondary' --cycle` and installing disper
+   `sudo apt-get install disper`
  - Change application for keyboard shortcut `Print Screen` to
    `xfce4-screenshooter --fullscreen --save /home/sebastian/Desktop`
  - Change keyboard shortcut for xfce4-popup-whiskermenu to `Super+X` (can't use
