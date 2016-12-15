@@ -339,4 +339,6 @@ ln -s ~/.virtualenvs/httpie/bin/http ~/.bin/
 
 Other things that I install that way are:
 
- - docker-compose
+ - [aws](https://aws.amazon.com/cli/)
+ - [docker-compose](https://docs.docker.com/compose/)
+ - [grip](https://github.com/joeyespo/grip)
