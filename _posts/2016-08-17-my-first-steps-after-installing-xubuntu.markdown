@@ -245,6 +245,7 @@ other ways:
 
 ```bash
 sudo apt-get install \
+    autokey-gtk \
     baobab `# to analyze disk usage from Thunar context menu` \
     compton \
     devilspie2 \
