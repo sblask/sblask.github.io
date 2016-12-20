@@ -216,7 +216,12 @@ Then the repositories can be cloned:
 
 ```bash
 # a few things are required
-sudo apt-get install curl jq git subversion
+sudo apt-get install \
+    curl \
+    git \
+    jq \
+    moreutils \
+
 mkdir ~/Clones
 cd ~/Clones
 curl --silent https://api.github.com/users/sblask/repos \
