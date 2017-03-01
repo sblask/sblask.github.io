@@ -348,5 +348,14 @@ ln -s ~/.virtualenvs/httpie/bin/http ~/.bin/
 Other things that I install that way are:
 
  - [aws](https://aws.amazon.com/cli/)
+   ```
+   # for completions:
+   ln -s ~/.virtualenvs/awscli/bin/aws_completer ~/.bin/
+   ln -s ~/.virtualenvs/awscli/bin/aws_zsh_completer.sh ~/.zsh/bash_completions.d/
+   ```
  - [docker-compose](https://docs.docker.com/compose/)
+   ```
+   # for completions:
+    curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completions.d/_docker-compose
+   ```
  - [grip](https://github.com/joeyespo/grip)
