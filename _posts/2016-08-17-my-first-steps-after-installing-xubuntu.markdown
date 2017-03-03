@@ -359,3 +359,4 @@ Other things that I install that way are:
     curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completions.d/_docker-compose
    ```
  - [grip](https://github.com/joeyespo/grip)
+ - [yq](https://github.com/kislyuk/yq)
