@@ -48,6 +48,21 @@ There are several things to do under the `Items` tab:
    color the same as the panel using the colour picker.
  - Change the format of the clock to `Week %V, %A %d %B, %H:%M:%S`
 
+
+## Disable Title Bar For Maximized Windows
+
+For the longest time I was looking for options to remove the title bar for
+maximised windows. After a lot of googling, trial and error, I found a
+combination of `maximus` and `devilspie2` and quite a bit of configuration to
+work best. It still didn't work great though because `devilspie2` crashed quite
+frequently.  And then I found [this
+solution](http://thenumberzero.blogspot.se/2014/07/a-no-install-solution-to.html)
+for XFCE which just works and is really this simple:
+
+ - open xfce4-settings-editor
+ - under xfwm4 tick titleless_maximize
+
+
 ## Setup External Hardware
 
 I have got a printer and a NAS both configured with static IPs.
@@ -253,8 +268,6 @@ sudo apt-get install \
     autokey-gtk \
     baobab `# to analyze disk usage from Thunar context menu` \
     compton \
-    devilspie2 \
-    maximus \
     meld `# to compare files and directories from Thunar context menu` \
     puddletag `# to edit mp3 tags from Thunar context menu` \
     redshift \
