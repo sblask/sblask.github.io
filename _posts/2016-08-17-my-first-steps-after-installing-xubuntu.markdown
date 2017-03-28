@@ -293,7 +293,7 @@ Really the easiest of the lot, all you need is the following which will also
 change you shell configuration file.
 
 ```bash
-curl -L http://git.io/n-install | bash
+N_PREFIX=$HOME/.n curl -L http://git.io/n-install | bash
 ```
 
 ### Ruby
