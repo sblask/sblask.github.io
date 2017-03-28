@@ -327,18 +327,15 @@ curl https://pypi.python.org/pypi/virtualenv \
 
 # install virtualenv and virtualenvwrapper
 tar --extract --strip-components 1 --file *.tar.gz
-./virtualenv.py ~/opt/virtualenv
-~/opt/virtualenv/bin/pip install virtualenvwrapper
+./virtualenv.py ~/.opt/virtualenv
+~/.opt/virtualenv/bin/pip install virtualenvwrapper
 
 ```
 
 Now virtualenvwrapper can be loaded from your [shell
 configuration][virtualenvwrapper_zsh] which requires your
-[PATH][virtualenv_path] to contain the path to the virtualenv in `~/opt`.
-To make it even handier and to be able to easily handle the difference between
-Python 2 and 3, I've got [few aliases][virtualenvwrapper_aliases].
+[PATH][virtualenv_path] to contain the path to the virtualenv in `~/.opt`.
 
-[virtualenvwrapper_aliases]: https://github.com/sblask/dotfiles/blob/48d47a96aa174b92b808f5b3faff94e05b8bb5f0/zshrc.dotfile#L293
 [virtualenvwrapper_zsh]:     https://github.com/sblask/dotfiles/blob/40cccd3fc918059e5da160151af2bde7ce73b515/zshrc.dotfile#L233
 [virtualenv_path]:           https://github.com/sblask/dotfiles/blob/40cccd3fc918059e5da160151af2bde7ce73b515/zshrc.dotfile#L227
 
