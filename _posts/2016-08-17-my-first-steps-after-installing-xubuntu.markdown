@@ -269,6 +269,7 @@ sudo apt-get install \
     baobab `# to analyze disk usage from Thunar context menu` \
     compton \
     meld `# to compare files and directories from Thunar context menu` \
+    parcellite `# keeps copied text in the clipboard even after applications have been closed` \
     puddletag `# to edit mp3 tags from Thunar context menu` \
     redshift \
     tmux `# use 'CTRL-B' + 'I' to install the plugins` \
