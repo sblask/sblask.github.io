@@ -66,17 +66,20 @@ the index consumer part. SCM Breeze creates numbered environment variables to
 hold references to file paths and branches, so all that needed to be done was
 parsing indexes from the command line, resolve the matching environment
 variable and replace the indexes with the result. What I came up with is the
-[expand-indexes-or-expand-or-complete function][1] which I map to `<Tab>` like
-[this][2] Now I can type `comamnd 1 2 3-6 7<Tab>` and the numbers will be
+[expand-indexes-or-expand-or-complete function][1] which I mapped to `<Tab>`
+like [this][2]. Now I can type `command 1 3-6 9<Tab>` and the numbers will be
 replaced with branches or file paths that are referenced by the environment
-variables matching the numbers / range of numbers (normal tab completion still
-works if there are no numbers or matches). Now obviously this is not the same
-as just typing the number and enter and the command will just run, but I use
-`<Tab>` all the time anyway and this approach has the following advantages:
+variables matching `1 3 4 5 6 9` (normal tab completion still works if there
+are no numbers or matches). Now obviously this is not the same as just typing
+the command and the numbers and everything will run just fine when pressing
+enter, but I use `<Tab>` all the time anyway and this approach has the
+following advantages:
 
  - I can use indexes with all commands
- - I can double check that I typed the right numbers
+ - I can check that I typed the right numbers by double-checking the result of
+   the expansion
  - I can expand the same number twice and edit the result for simple renaming
+   etc.
  - shell history search has more of a chance to find something useful when
    having the history full of `vim meaningful_filename` instead of `vim 1`
 
@@ -86,14 +89,15 @@ approach is always possible if not.
 
 Off to the last part: adding indexes to command output. I rarely use full
 commands but mostly aliases, so I figured I can create aliases where I call
-scripts/functions to do the job. So I created a [Python script][3] and added
-it to my `PATH` that adds the indexes and outputs a list of files to be used in
-a subsequent step. This list is filtered from the output and transformed into
+scripts/functions to do the job. So I created a [Python script][3] and added it
+to my `PATH` that adds the indexes and outputs a list of files to be used in a
+subsequent step. This list is filtered from the output and transformed into
 environment variables by this simple [function][4] (it needs to be a function,
-not a script as environment variables can only be set inside the same process,
-which a call to a script would leave.) I use them in [these functions][5]. The
-only reasone it's functions and not aliases is because I need to be able to
-pass arguments to the first command in the pipeline.
+not a script, as environment variables can only be set inside the same process,
+which a call to a script would leave.) I use them in [these functions][5] that
+I can call just like aliases. The only reason I use functions and not aliases
+is that I need to be able to pass arguments to the first command in the
+pipeline.
 
 Done!
 
