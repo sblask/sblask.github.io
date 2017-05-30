@@ -165,6 +165,7 @@ sudo apt-get install \
     gnome-font-viewer \
     gparted \
     inkscape \
+    libreoffice \
     pdftk \
     pinta \
     puddletag \
