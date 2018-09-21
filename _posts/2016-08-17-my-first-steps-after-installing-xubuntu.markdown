@@ -324,7 +324,7 @@ system clean, I can even get away without installing virtualenv system wide:
 ```bash
 cd /tmp
 # get the current virtualenv package
-curl https://pypi.python.org/pypi/virtualenv \
+curl https://pypi.org/project/virtualenv/ \
     |  pup 'a[href]:contains("tar.gz") attr{href}' | xargs -L 1 wget
 
 # install virtualenv and virtualenvwrapper
